@@ -14,6 +14,7 @@ app.use(express.json());
 
 connectDB();
 setupSwagger(app);
+app.use(express.static("public"));
 app.use("/api", userRoutes);
 app.use("/api",songRoutes);
 
